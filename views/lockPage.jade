@@ -4,10 +4,10 @@ html(lang="en")
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="IE=Edge,chrome=1")
-    meta(name="description", content="Boda de Lorena y Pedro")
-    meta(name="author", content="Marco Antonio Pajares Silva")
+    meta(name="description", content="The Diniz Wedding")
+    meta(name="author", content="Paulo Diniz")
     link(rel="shortcut icon", href="img/favicon.png")
-    title Boda de Lorena y Pedro
+    title The Diniz Wedding
     // Bootstrap core CSS
     link(href="css/bootstrap.css", rel="stylesheet")
     // Custom styles for this template
@@ -31,18 +31,14 @@ html(lang="en")
         .col-md-12
           .wrap
             p.form-title
-              | Inserte código de desbloqueo
+              | Please insert invitation code
             if domain
               form.login(action="login" , method="POST")
-                input(type="text", name='code', placeholder="Codigo")
+                input(type="text", name='code', placeholder="Code")
                 input#ip(type="hidden", name='ip')
                 input.btn.btn-success.btn-sm(type="submit", value="Sign In")
             else
               form.login(action="/login" , method="POST")
-                input(type="text", name='code', placeholder="Codigo")
+                input(type="text", name='code', placeholder="Code")
                 input#ip(type="hidden", name='ip')
                 input.btn.btn-success.btn-sm(type="submit", value="Sign In")
-
-      .posted-by
-        | Posted By:
-        a(href="http://www.ayxos.com") Marco Antonio Pajares
